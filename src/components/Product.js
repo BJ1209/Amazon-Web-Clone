@@ -1,7 +1,21 @@
 import React from "react";
+import { useStateValue } from "../context/StateProvider";
 import "./Product.css";
 
-function product({ title, price, rating, imageUrl }) {
+function Product({ id, title, price, rating, imageUrl }) {
+  const [, dispatch] = useStateValue();
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        imageUrl: imageUrl,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
   return (
     <div className="product">
       <div className="product__info">
@@ -14,14 +28,14 @@ function product({ title, price, rating, imageUrl }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={i}>⭐</p>
             ))}
         </div>
       </div>
       <img className="product__image" src={imageUrl} alt={title} />
-      <button>Add To Basket</button>
+      <button onClick={addToBasket}>Add To Basket</button>
     </div>
   );
 }
 
-export default product;
+export default Product;

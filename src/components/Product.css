@@ -12,19 +12,20 @@
 }
 .product > img {
   object-fit: contain;
-  max-height: 14.5em;
+  max-height: 14em;
   margin: 1em 0;
 }
 .product__info {
   align-self: flex-start;
+  min-height: 7.3em;
 }
 .product__info > p:first-of-type {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 1px;
 }
 .product__price {
-  font-size: 1.08rem;
+  font-size: 1rem;
   margin: 0.2em 0;
 }
 .product__stars {

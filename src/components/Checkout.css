@@ -20,3 +20,28 @@
   padding: 0.5em 0.6em;
   border-bottom: 1px solid lightgray;
 }
+.checkout_emptyBasket {
+  display: flex;
+  margin: 2.5em 3.5em;
+}
+.checkout_emptyBasket > img {
+  object-fit: contain;
+  height: 12em;
+  margin: 0em 4em 0 0;
+}
+.checkout__basketInfo {
+  margin: 1em 0;
+}
+.checkout__basketInfo > h1 {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+.checkout__basketInfo > a {
+  color: #427885;
+  font-size: 1.15rem;
+  margin-top: 0.8em;
+}
+.checkout__basketInfo > a:hover,
+.checkout__basketInfo > a:focus {
+  color: #c7511f;
+}

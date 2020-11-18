@@ -1,0 +1,96 @@
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+.login__logo {
+  object-fit: contain;
+  height: 3.8em;
+}
+.login__container {
+  height: fit-content;
+  width: 20em;
+  margin-top: 0.5em;
+  border: 1px solid lightgray;
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.login__container > h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+.login__form > h5 {
+  margin-bottom: 0.3em;
+}
+.login__form > input {
+  height: 2.2em;
+  margin-bottom: 1.2em;
+  background-color: #fff;
+  border: 1.5px solid lightgray;
+  border-radius: 3px;
+}
+
+.login__form > input:focus {
+  outline: none;
+  border: 1.5px solid #e77600;
+  box-shadow: rgba(228, 121, 17, 0.5) 0 0 3px 2px;
+}
+.login__signInBtn {
+  background-color: #f0c14b;
+  border: 1px solid;
+  color: #111;
+  border-color: #a88734 #9c7e31 #846a29;
+  padding: 0.5em 1em;
+  font-weight: 400;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: 1em 0;
+}
+.login__container > p {
+  font-size: 0.8rem;
+}
+
+.login > hr {
+  border: 0;
+  height: 1px;
+  background-color: lightgray;
+  margin: 4em 0 3em 0;
+  width: 40em;
+  color: #acacac;
+  text-align: center;
+  overflow: visible;
+  font-size: 0.5rem;
+}
+.login > hr::after {
+  content: "  New to Amazon ? ";
+  display: inline-block;
+  margin: 0 0.4em;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+.login__registerBtn {
+  width: 24em;
+  border-radius: 2px;
+  background-color: #eceef1;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  padding: 0.35em;
+  letter-spacing: 1px;
+}
+.login__registerBtn:hover,
+.login__registerBtn:focus {
+  background-color: #dfe2e7;
+}

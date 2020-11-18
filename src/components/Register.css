@@ -1,0 +1,76 @@
+.register {
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.register__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register__container > a {
+  margin: 1em 0 0.5em 0;
+}
+.register__form {
+  border: 1.5px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1.2em 1.5em 1.2em;
+  width: 22em;
+  border-radius: 3px;
+}
+.register__form > h1 {
+  font-weight: normal;
+  margin-bottom: 0.6em;
+}
+.register__form > h5 {
+  margin-bottom: 0.25em;
+}
+.register__form > input {
+  height: 2.2em;
+  margin-bottom: 1.2em;
+  background-color: #fff;
+  border: 1.5px solid lightgray;
+  border-radius: 3px;
+}
+.register__form > input:focus {
+  outline: none;
+  border: 1.5px solid #e77600;
+  box-shadow: rgba(228, 121, 17, 0.5) 0 0 3px 2px;
+}
+.register__btn {
+  background-color: #f0c14b;
+  border: 1px solid;
+  color: #111;
+  border-color: #a88734 #9c7e31 #846a29;
+  padding: 0.5em 1em;
+  font-weight: 400;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: 0.6em 0;
+}
+.register__form > hr {
+  margin: 1em 0 1.4em 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+.register__form > p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.register__signIn {
+  margin-left: 0.5em;
+  color: #6b66c0;
+}
+.register__signIn:hover,
+.register__signIn:focus {
+  color: #c95500;
+}
