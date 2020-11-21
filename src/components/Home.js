@@ -1,13 +1,51 @@
 import React from "react";
 import "./Home.css";
-import primeBanner from "../images/prime_banner.jpg";
 import Product from "./Product";
+import primeBanner from "../images/prime_banner.jpg";
+import primeBanner1 from "../images/banner1.jpg";
+import primeBanner2 from "../images/banner.jpg";
+import primeBanner3 from "../images/banner2.jpg";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
-        <img className="home__image" src={primeBanner} alt="Amazon Prime Banner" />
+        <Carousel>
+          <Carousel.Item interval={2000}>
+            <img
+              id="home__image"
+              className="home__image"
+              src={primeBanner}
+              alt="Amazon Prime Banner"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img
+              id="home__image"
+              className="home__image"
+              src={primeBanner1}
+              alt="Amazon Prime Banner"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img
+              id="home__image"
+              className="home__image"
+              src={primeBanner2}
+              alt="Amazon Prime Banner"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img
+              id="home__image"
+              className="home__image"
+              src={primeBanner3}
+              alt="Amazon Prime Banner"
+            />
+          </Carousel.Item>
+        </Carousel>
         <div className="home__row">
           <Product
             key="15975341"
@@ -28,13 +66,15 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
-            key="85269342"
-            id="85269342"
-            title={`DEGOL Skipping Rope with Ball Bearings Rapid Speed Jump Rope Cable and 6” Memory Foam Handles Ideal for Aerobic Exercise`}
-            price={6.99}
-            imageUrl="https://images-na.ssl-images-amazon.com/images/I/41MXvr5tYDL._AC_US240_FMwebp_QL65_.jpg"
+            key="85869342"
+            id="85869342"
+            title={`Urban Ladder Toshi Queen Size Bed with Pull Out Storage`}
+            price={499.99}
+            imageUrl="https://images-na.ssl-images-amazon.com/images/I/71%2BrXEdZCxL._SL1332_.jpg"
             rating={5}
           />
+        </div>
+        <div className="home__row">
           <Product
             key="87466327"
             id="87466327"
@@ -64,26 +104,36 @@ function Home() {
           <Product
             key="12858647"
             id="12858647"
-            title={`A Time for Mercy (Jake Brigance Book 3) - John Grisham`}
+            title={`A Time for Mercy - John Grisham`}
             price={14.99}
             imageUrl="https://images-na.ssl-images-amazon.com/images/I/A1UItsEWNWL.__BG0,0,0,0_FMpng_AC_UL270_SR178,270_.jpg"
             rating={4}
           />
           <Product
-            key="22858641"
-            id="22858641"
-            title={`A Brief History of Time - Stephan Hawking`}
-            price={16.99}
-            imageUrl="https://images-na.ssl-images-amazon.com/images/I/51+GySc8ExL._AC_SX184_.jpg"
-            rating={5}
-          />
-          <Product
             key="82868646"
             id="82868646"
-            title={`The Battle of Chamkaur - Harinder Singh`}
+            title={`The Battle of Chamkaur `}
             price={10.99}
             imageUrl="https://m.media-amazon.com/images/I/71n2LstPG+L._AC_UY327_FMwebp_QL65_.jpg"
             rating={5}
+          />
+        </div>
+        <div className="home__row">
+          <Product
+            key="15972341"
+            id="15972341"
+            title="Echo Dot (3rd Gen) - Smart speaker with Alexa - Heather Gray"
+            price={399}
+            imageUrl="https://images-na.ssl-images-amazon.com/images/I/61KIcV26CdL._AC_SL1000_.jpg"
+            rating={5}
+          />
+          <Product
+            key="48672385"
+            id="48672385"
+            title={`3D Mask Bracket - Oceantree Protect Lipstick Lips`}
+            price={11.99}
+            imageUrl="https://images-na.ssl-images-amazon.com/images/I/61sJTqJFPWL._SL1450_.jpg"
+            rating={4}
           />
         </div>
         <div className="home__row">

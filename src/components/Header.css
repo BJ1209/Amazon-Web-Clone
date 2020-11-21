@@ -8,11 +8,14 @@
   color: #fff;
   height: 4em;
 }
+.header > a {
+  flex: 0.15;
+  display: grid;
+  place-items: center;
+}
 .header__logo {
-  margin: 0 0.5em;
   object-fit: contain;
   height: 3.5em;
-  flex: 0.1;
 }
 .header__search {
   display: flex;
@@ -21,7 +24,7 @@
 }
 .header__search > input {
   flex: 1;
-  padding: 0.8em;
+  padding: 0.4em;
   border-radius: 4px 0 0 4px;
   border: none;
 }
@@ -40,16 +43,21 @@
 }
 
 .header__nav {
-  flex: 0.35;
+  flex: 0.3;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+.header__nav > a {
+  text-decoration: none !important;
 }
 .header__option {
   display: flex;
   flex-direction: column;
   padding: 0.5em;
+  transition: all 0.25s ease-in-out;
 }
+
 .header__optionLineOne {
   font-weight: normal;
   font-size: 0.8rem;
@@ -60,7 +68,12 @@
 }
 .header__optionBasket {
   display: flex;
+  transition: all 0.25s ease-in-out;
   align-items: center;
+}
+.header__option:hover,
+.header__optionBasket:hover {
+  color: #febd69;
 }
 .header__basketIcon {
   font-size: 1.5rem;
@@ -69,94 +82,70 @@
   margin: 0 2em 0 0.5em;
   color: #f3a847;
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .header__logo {
-    height: 3em;
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .header > a {
+    flex: 0.12;
   }
   .header__search {
     flex: 0.48;
-    margin-right: 0.5em;
   }
   .header__nav {
-    flex: 0.42;
+    flex: 0.4;
   }
-  .header__option {
-    padding: 0.4em 0.2em;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header > a {
+    flex: 0.14;
   }
-  .header__optionLineOne {
-    font-size: 0.75rem;
+  .header__search {
+    flex: 0.43;
   }
-  .header__optionLineTwo {
-    font-size: 0.9rem;
-  }
-  .header__basketCount {
-    margin: 0 0.5em 0 0.5em;
+  .header__nav {
+    flex: 0.43;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 768px) {
-  .header__logo {
-    height: 2.5em;
+  .header > a {
+    flex: 0.14;
   }
   .header__search {
-    flex: 0.46;
-    margin-right: 0.5em;
+    flex: 0.43;
   }
   .header__nav {
-    flex: 0.44;
-  }
-  .header__option {
-    padding: 0.4em 0.2em;
-  }
-  .header__optionLineOne {
-    font-size: 0.7rem;
-  }
-  .header__optionLineTwo {
-    font-size: 0.85rem;
-  }
-  .header__basketIcon {
-    font-size: 1.2rem;
-  }
-  .header__basketCount {
-    margin: 0 0.5em 0 0.5em;
+    flex: 0.43;
   }
 }
-
-@media screen and (min-width: 0px) and (max-width: 600px) {
-  .header__logo {
-    height: 1.5em;
-    margin: 0 0.1em;
+@media screen and (min-width: 450px) and (max-width: 600px) {
+  .header__searchIcon {
+    width: 0.9em;
   }
-  .header__search {
+  .header > a {
     flex: 0.15;
   }
-  .header__search > input {
-    padding: 0.3em 0.2em;
-  }
-  .header__searchIcon {
-    font-size: 1.5rem;
-    width: 0.7em;
+  .header__search {
+    flex: 0.3;
   }
   .header__nav {
-    flex: 0.75;
-    justify-content: center;
+    flex: 0.55;
   }
-  .header__option {
-    padding: 0.4em 0.15em;
+  .header__search > input {
+    width: 4.5em;
   }
-  /* .header__option:nth-of-type(3) {
-    display: none;
-  } */
-  .header__optionLineOne {
-    font-size: 0.5rem;
+}
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .header__searchIcon {
+    width: 0.9em;
   }
-  .header__optionLineTwo {
-    font-size: 0.6rem;
+  .header > a {
+    flex: 0.15;
   }
-  .header__basketIcon {
-    font-size: 1rem;
+  .header__search {
+    flex: 0.2;
   }
-  .header__basketCount {
-    margin: 0 0.3em;
-    font-size: 0.7rem;
+  .header__nav {
+    flex: 0.65;
+  }
+  .header__search > input {
+    width: 5em;
   }
 }

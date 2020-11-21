@@ -2,7 +2,6 @@
   display: flex;
   padding: 1.2em;
   background-color: #fff;
-  height: max-content;
 }
 .checkout__left {
   flex: 0.75;
@@ -44,4 +43,36 @@
 .checkout__basketInfo > a:hover,
 .checkout__basketInfo > a:focus {
   color: #c7511f;
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .checkout__left {
+    flex: 0.67;
+  }
+  .checkout__right {
+    flex: 0.33;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .checkout__left {
+    flex: 0.62;
+  }
+  .checkout__right {
+    flex: 0.38;
+  }
+  .checkout {
+    padding: 1em 0.4em;
+  }
+  .checkout_emptyBasket {
+    margin: 1em 0.5em;
+  }
+  .checkout_emptyBasket > img {
+    height: 8em;
+    margin: 3em 1em 0 0;
+  }
+  .checkout__basketInfo > h1 {
+    font-size: 1.2rem;
+  }
+  .checkout__basketInfo > a {
+    font-size: 1rem;
+  }
 }

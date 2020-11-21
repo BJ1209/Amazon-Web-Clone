@@ -1,9 +1,14 @@
 import React from "react";
 import { useStateValue } from "../context/StateProvider";
 import "./Product.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ToastComponent from "./ToastComponent";
 
 function Product({ id, title, price, rating, imageUrl }) {
   const [, dispatch] = useStateValue();
+
+  toast.configure();
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -15,6 +20,17 @@ function Product({ id, title, price, rating, imageUrl }) {
         rating: rating,
       },
     });
+  };
+  const notify = () => {
+    toast.info(<ToastComponent title={title} imageUrl={imageUrl} />, {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 3000,
+      pauseOnFocusLoss: true,
+    });
+  };
+  const tasks = () => {
+    addToBasket();
+    notify();
   };
   return (
     <div className="product">
@@ -33,7 +49,7 @@ function Product({ id, title, price, rating, imageUrl }) {
         </div>
       </div>
       <img className="product__image" src={imageUrl} alt={title} />
-      <button onClick={addToBasket}>Add To Basket</button>
+      <button onClick={tasks}>Add To Basket</button>
     </div>
   );
 }

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useStateValue } from "../context/StateProvider";
 import "./CheckoutProduct.css";
 
-function CheckoutProduct({ id, imageUrl, title, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+const CheckoutProduct = forwardRef(({ id, imageUrl, title, price, rating }, ref) => {
+  const [, dispatch] = useStateValue();
   const removeFromBasket = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",
@@ -11,7 +11,7 @@ function CheckoutProduct({ id, imageUrl, title, price, rating }) {
     });
   };
   return (
-    <div className="checkoutProduct">
+    <div ref={ref} className="checkoutProduct">
       <img className="checkoutProduct__image" src={imageUrl} alt={title} />
       <div className="checkoutProduct__info">
         <p className="checkoutProduct__title">{title}</p>
@@ -32,6 +32,6 @@ function CheckoutProduct({ id, imageUrl, title, price, rating }) {
       </p>
     </div>
   );
-}
+});
 
 export default CheckoutProduct;

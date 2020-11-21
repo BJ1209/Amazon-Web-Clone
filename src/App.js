@@ -8,6 +8,8 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import { useStateValue } from "./context/StateProvider";
 import { auth } from "./config/firebase";
+import Footer from "./components/Footer";
+import Payment from "./components/Payment";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -37,6 +39,7 @@ function App() {
         <Route exact path="/">
           <Header />
           <Home />
+          <Footer />
         </Route>
         <Route path="/checkout">
           <Header />
@@ -47,6 +50,10 @@ function App() {
         </Route>
         <Route path="/register">
           <Register />
+        </Route>
+        <Route path="/payment">
+          <Header />
+          <Payment />
         </Route>
       </Switch>
     </div>

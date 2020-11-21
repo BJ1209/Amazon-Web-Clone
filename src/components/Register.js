@@ -57,7 +57,7 @@ function Register() {
           <hr />
           <p>
             Already Have An Account?
-            <Link className="registedwr__signIn" to="/login">
+            <Link className="register__signIn" to="/login">
               Sign in
             </Link>
           </p>
